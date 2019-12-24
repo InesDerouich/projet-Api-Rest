@@ -1,0 +1,26 @@
+nelmio_api_doc:
+    models: { use_jms: false }    
+    documentation:
+        host: api.example.com
+        schemes: [http, https]
+        info:
+            title: My App
+            description: This is an awesome app!
+            version: 1.0.0
+        securityDefinitions:
+            Bearer:
+                type: apiKey
+                description: 'Value: Bearer {jwt}'
+                name: Authorization
+                in: header
+        security:
+            - Bearer: []
+
+               # areas:
+        #default:
+           # path_patterns: [ ^/api ]
+            #host_patterns: [ ^api\. ]
+        #internal:
+            #path_patterns: [ ^/internal ]
+       # commercial:
+           # path_patterns: [ ^/commercial ]
